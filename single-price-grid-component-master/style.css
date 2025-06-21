@@ -1,0 +1,119 @@
+:root {
+  /* Primary */
+  --Cyan: hsl(179, 62%, 43%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+
+  /* Neutral */
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: url("https://fonts.google.com/specimen/Karla"), sans-serif;
+  background-color: var(--Light-Gray);
+  /* font-weight: 400, 700; */
+}
+
+button {
+  background-color: var(--Bright-Yellow);
+  color: white;
+  border: none;
+  padding: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+h3 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: var(--Grayish-Blue);
+}
+
+.container {
+  display: grid;
+  background-color: white;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 768px;
+  margin: 2rem auto;
+}
+
+.article {
+  padding: 1.5rem 2rem;
+}
+
+.article1 h3 {
+  color: var(--Cyan);
+}
+
+.article1 .day {
+  color: var(--Bright-Yellow);
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+
+.article1 p {
+  line-height: 1.8rem;
+}
+
+.article2 {
+  background-color: var(--Cyan);
+  color: white;
+}
+
+.article2,
+.article3 {
+  color: var(--Light-Gray);
+}
+
+.article2 div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--Light-Gray);
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.article2 p {
+  color: var(--Light-Gray);
+  line-height: 2rem;
+}
+
+.article3 {
+  background-color: hsla(179, 62%, 43%, 0.8);
+}
+
+.article3 p {
+  line-height: 1.5rem;
+  color: var(--Light-Gray);
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .article {
+    padding: 40px;
+  }
+
+  .article1 {
+    grid-column: 1/3;
+  }
+}
