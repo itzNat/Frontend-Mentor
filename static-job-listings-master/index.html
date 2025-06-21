@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+  <style>
+    /* Colors */
+    :root {
+      --desaturated-dark-cyan: hsl(180, 29%, 50%);
+      --light-grayish-cyan-bg: hsl(180, 52%, 96%);
+      --light-grayish-cyan-filter: hsl(180, 31%, 95%);
+      --dark-grayish-cyan: hsl(180, 8%, 52%);
+      --very-dark-grayish-cyan: hsl(180, 14%, 20%);
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+    /* Typography */
+    body {
+      font-size: 15px;
+      font-family: "League Spartan";
+      background: var(--light-grayish-cyan-bg);
+    }
+  </style>
+<body>
+  <section class="">
+    <img class="w-full h-20 bg-bottom bg-no-repeat bg-cover bg-[url('images/bg-header-mobile.svg')] md:bg-[url('images/bg-header-desktop.svg')]" alt="">
+    <div class="job-filtered-container bg-white p-10 relative -top-10 hidden"></div>
+    <div class="job-container flex flex-col gap-16 p-8 bg-[--light-grayish-cyan-bg]"></div>
+  </section>
+</body>
+<script src="main.js"></script>
+</html>
