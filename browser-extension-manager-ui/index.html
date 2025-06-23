@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Document</title>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+</head>
+<body class="min-h-screen px-3 bg-gradient-to-b from-[#EBF2FC] to-[#EEF8F9 dark:from-[#040918] dark:to-[#091540] dark:text-white transition duration-300">
+  <div class="max-w-[1250px] mx-auto py-10 md:mx-12">
+    <div class="flex items-center justify-between p-4 bg-white shadow-md dark:bg-[var(--Neutral-800)] rounded-xl">
+      <img class="block dark:hidden" src="images/logo.svg" alt="Extension Picture">
+      <img class="hidden dark:block text-white" src="images/logo.svg" alt="Extension Picture">
+      <div id="theme-toggle">
+        <img src="images/icon-moon.svg" alt="toggle-dark-mode" class="bg-gray-200 rounded-xl p-2 cursor-pointer dark:bg-gray-800 transition duration-300 block dark:hidden">
+      <img src="images/icon-sun.svg" alt="toggle-light-mode" class="bg-gray-200 rounded-xl p-2 cursor-pointer dark:bg-[var(--Neutral-600)] transition duration-300 hidden dark:block">
+      </div>
+      
+    </div>
+
+    <div class="flex items-center flex-col md:flex-row md:justify-between my-7">
+      <h1 class="text-4xl font-semibold text-[var(--Neutral-800)] dark:text-[var(--Neutral-100)]">Extension List</h1>
+      <div class="filter-container">
+        <button data-filter="all" class="bg-red-700 text-white  py-1 px-3 shadow-md rounded-full dark:text-white">All</button>
+        <button data-filter="active" class="bg-white text-[var(--Neutral-800)] py-1 px-3 shadow-md rounded-full dark:bg-[var(--Neutral-800)] dark:text-white">Active</button>
+        <button data-filter="inactive" class="bg-white text-[var(--Neutral-800)] py-1 px-3 shadow-md rounded-full dark:bg-[var(--Neutral-800)] dark:text-white">Inactive</button>
+      </div>
+    </div>
+
+    <div class="extensions-container flex flex-wrap justify-center"></div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
