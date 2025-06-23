@@ -51,4 +51,4 @@ A collection of my completed challenges from [Frontend Mentor](https://www.front
 ## 📬 Contact
 
 [![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/Itz_Naht)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/itz-nat?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B6Apxu%2ByLRLSDyUzZHVvQYw%3D%3D)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/itz-nat?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B6Apxu%2ByLRLSDyUzZHVvQYw%3D%3D) 
