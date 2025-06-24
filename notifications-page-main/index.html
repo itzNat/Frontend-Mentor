@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+  <title>Notifications-page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-100">
+  <div class="bg-white max-w-[50rem] md:my-8 m-auto p-6 rounded-md">
+    <div>
+      <div class="flex justify-between mb-8">
+        <h1 class="text-xl font-bold">Notifications <span id="notifications-num"
+            class="px-3 bg-[#0a317b] rounded-md text-gray-100">3</span></h1>
+        <button id="read-all-btn" class="text-gray-600">Mark all as read</button>
+      </div>
+      <div class="flex flex-col gap-3">
+        <div class="unread flex p-6 rounded-xl gap-4">
+          <img src="images/avatar-mark-webber.webp" alt="avatar-mark-webber" class="w-12 h-12">
+          <div>
+            <p class="text-[#5e6778]">
+              <span class="text-[#1c202b] font-bold">Mark Webber</span>
+              reacted to your revent post
+              <span class="text-[#5e6778] font-bold">My first tournament today! </span>
+              <span class="dot"></span>
+            </p>
+            <p class="text-[#939dae]">1m ago</p>
+          </div>
+        </div>
+        <div class="unread flex p-6 rounded-xl gap-4">
+          <img src="images/avatar-angela-gray.webp" alt="avatar-angela-gray" class="w-12 h-12">
+          <div>
+            <p class="text-[#5e6778]">
+              <span class="text-[#1c202b] font-bold">Angela Gray</span>
+              followed you
+              <span class="dot"></span>
+            </p>
+            <p class="text-[#939dae]">5m ago</p>
+          </div>
+        </div>
+        <div class="unread flex p-6 rounded-xl gap-4">
+          <img src="images/avatar-jacob-thompson.webp" alt="avatar-jacob-thompson" class="w-12 h-12">
+          <div>
+            <p class="text-[#5e6778]">
+              <span class="text-[#1c202b] font-bold">Jacob Thompsonr</span>
+              has joined your group
+              <span class="cursor-pointer text-[#0a317b] font-bold">Chess Club</span>
+              <span class="dot"></span>
+            </p>
+            <p class="text-[#939dae]">1day ago</p>
+          </div>
+        </div>
+        <div class="flex p-6 gap-4">
+          <img src="images/avatar-rizky-hasanuddin.webp" alt="avatar-rizky-hasanuddin" class="w-12 h-12">
+          <div>
+            <p class="text-[#5e6778]">
+              <span class="text-[#1c202b] font-bold">Rizky Hasanuddin</span>
+              sent you a private message
+            </p>
+            <p class="text-[#939dae]">5days ago</p>
+          </div>
+        </div>
+        <div class="flex w-[85%] self-end border-2 p-4 rounded-md hover:bg-[#e5effa] cursor-pointer">
+          <p class="text-[#5e6778]">Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having
+            lots of fun and improving my game.</p>
+        </div>
+        <div class="flex p-6 gap-4">
+          <img src="images/avatar-kimberly-smith.webp" alt="avatar-kimberly-smith" class="w-12 h-12">
+          <div class="flex justify-between w-full">
+            <div>
+              <p class="text-[#5e6778]">
+                <span class="text-[#1c202b] font-bold">Kimberly Smith</span>
+                commented on your picture
+                <span>My first tournament today! </span>
+              </p>
+              <p class="text-[#939dae]">1week ago</p>
+            </div>
+            <img src="images/image-chess.webp" alt="image-chess" class="w-14 h-14 cursor-pointer">
+          </div>
+        </div>
+        <div class="flex p-6 gap-4">
+          <img src="images/avatar-nathan-peterson.webp" alt="avatar-nathan-peterson" class="w-12 h-12">
+          <div>
+            <p class="text-[#5e6778]">
+              <span class="text-[#1c202b] font-bold">Nathan Petersonr</span>
+              reacted post 5 end-game strategies to increase your win rate
+            </p>
+            <p class="text-[#939dae]">2weeks ago</p>
+          </div>
+        </div>
+        <div class="flex p-6 gap-4">
+          <img src="images/avatar-anna-kim.webp" alt="avatar-nathan-peterson" class="w-12 h-12">
+          <div>
+            <p class="text-[#5e6778]">
+              <span class="text-[#1c202b] font-bold">Anna Kim</span>
+              left the group 
+              <span class="cursor-pointer text-[#0a317b] font-bold">Chess Club</span>
+            </p>
+            <p class="text-[#939dae]">2weeks ago</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>

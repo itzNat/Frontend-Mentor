@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+body{
+  font-family: Noto sans;
+}
+
+.unread{
+  background: #f7fafd;
+}
+
+.dot{
+  position: relative;
+}
+
+.unread .dot::after{
+  color: hsl(1, 90%, 64%);
+  content: "•";
+  font-size: 2rem;
+  position: absolute;
+  bottom: -65%;
+}
