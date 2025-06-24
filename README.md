@@ -11,8 +11,10 @@ A collection of my completed challenges from [Frontend Mentor](https://www.front
 | #  |                Project               |            Technologies         |  Difficulty  |
 |----|--------------------------------------|---------------------------------|------------  |
 | 01 | [browser-extension-manager-ui]       | HTML, Tailwind CSS, JavaScript  | Junior       |
-| 02 | [single-price-grid-component-master] | HTML, CSS                       | Newbie       |
-| 03 | [static-job-listings-master]         | HTML, Tailwind CSS, JavaScript  | Intermediate |
+| 02 | [notifications-page]                 | HTML, Tailwind CSS, JavaScript  | Junior       |
+| 03 | [single-price-grid-component-master] | HTML, CSS                       | Newbie       |
+| 04 | [static-job-listings-master]         | HTML, Tailwind CSS, JavaScript  | Intermediate |
+
 
 ## 🚀 Features
 
