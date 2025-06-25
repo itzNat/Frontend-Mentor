@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>product preview card component</title>
+  <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#f2ebe3] flex items-center justify-center min-h-screen">
+  <div class="flex flex-col md:flex-row overflow-hidden max-w-[40rem] rounded-xl bg-white m-7 ">
+    <div class="md:w-1/2">
+      <img src="images/image-product-mobile.jpg" alt="product-mobile" class="md:hidden">
+      <img src="images/image-product-desktop.jpg" alt="desktop-mobile" class="hidden md:block">
+    </div>
+    <div class="p-6 md:w-1/2">
+      <p class="text-[#6c7289]">P E R F U M E</p>
+      <h1 class="text-4xl font-bold my-4">Gabrielle Essence Eau De Parfum</h1>
+      <p class="text-[#6c7289]">A floral, solar and voluptuous interpretation composed by Oliver Polge, Perfumer-creator for the House of CHANEL.</p>
+      <div class="flex items-center gap-4 my-5">
+        <h1 class="text-4xl font-bold text-[#3c8067]">$145.99</h1>
+        <p class="line-through text-[#6c7289]">$169.99</p>
+      </div>
+      <button class="bg-[#3c8067] flex gap-3 text-white p-5 w-full justify-center rounded-xl font-semibold hover:bg-[#2a5a48]">
+        <img src="images/icon-cart.svg" alt="cart">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</body>
+</html>

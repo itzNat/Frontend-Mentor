@@ -13,6 +13,7 @@ A collection of my completed challenges from [Frontend Mentor](https://www.front
 | 01 | [3-column-preview-card-component]    | HTML, Tailwind CSS              | Newbie       |
 | 02 | [browser-extension-manager-ui]       | HTML, Tailwind CSS, JavaScript  | Junior       |
 | 03 | [notifications-page]                 | HTML, Tailwind CSS, JavaScript  | Junior       |
+| 03 | [product-preview-card-component]     | HTML, Tailwind CSS              | Newbie       |
 | 04 | [single-price-grid-component-master] | HTML, CSS                       | Newbie       |
 | 05 | [static-job-listings-master]         | HTML, Tailwind CSS, JavaScript  | Intermediate |
 
