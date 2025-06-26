@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+  <title>Newsletter sign-up with success message</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+:root{
+  --Tomato: #ffc5c1;
+--Dark-Slate-Grey: #242742;
+--Charcoal-Grey: #36384e;
+--Grey: #9294a0;
+--White: #ffffff;
+}
+</style>
+<body class="bg-[#242742] min-h-screen flex items-center justify-center text-[#242742]">
+  <div class="flex flex-col md:flex-row bg-white md:rounded-2xl overflow-hidden md:p-4 max-w-[60rem]" id="hero-modal">
+    <img src="images/illustration-sign-up-mobile.svg" alt="" class="md:hidden">
+    <div class="m-8">
+      <h1 class="text-4xl font-semibold">Stay updated!</h1>
+      <p class="my-6">Join 60,000+ product managers receiving monthly updates on:</p>
+      <div>
+        <div class="flex gap-4 mb-4">
+          <img src="images/icon-list.svg" alt="icon-list">
+        <p>
+          Product discovery and building what mmatters
+        </p>
+        </div>
+        <div class="flex gap-4 mb-4">
+          <img src="images/icon-list.svg" alt="icon-list">
+          <p>
+          Measuring to ensure updates are a success
+        </p>
+        </div>
+        <div class="flex gap-4 mb-4">
+          <img src="images/icon-list.svg" alt="icon-list">
+          <p>
+          And much more
+        </p>
+        </div>
+      </div>
+      <form action="" id="email-form">
+        <div class="flex flex-col my-8">
+          <label for="" class="font-semibold my-4 flex justify-between">Email Address <span class="text-[#ff6257] hidden" id="error-text">Valid email required</span></label>
+        <input type="text" name="email" id="" placeholder="email@company.com" class="border-2 p-4 rounded-md">
+        </div>
+        <button type="submit" name="button" class="w-full bg-[#242742] text-white p-4 rounded-md hover:bg-[#ff6257]">Subscribe to monthly newsletter</button>
+      </form>
+    </div>
+    <img src="images/illustration-sign-up-desktop.svg" alt="" class="hidden md:block w-1/2">
+  </div>
+
+  <!-- success modal -->
+   <div class="bg-white min-h-screen p-10 md:rounded-3xl md:min-h-fit md:max-w-[30rem] hidden" id="success-modal">
+     <div class="my-[38%] md:my-auto">
+      <img src="images/icon-success.svg" alt="">
+      <h1 class="text-4xl font-semibold my-8">Thanks for subscribing!</h1>
+      <p>A confirmation email has been sent to <span class="font-bold">ash@loremcompany</span>. Please open it and click the button inside to confirm your subscription</p>
+    </div>
+    <button class="bg-[#242742] text-white w-full mt-10 p-4 rounded-md hover:bg-[#ff6257]" id="dismiss-btn">Dismiss message</button>
+   </div>
+
+   <script src="main.js"></script>
+</body>
+</html>
