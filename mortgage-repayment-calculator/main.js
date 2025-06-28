@@ -44,6 +44,14 @@ function renderResults() {
 
     monthlyPaymentBox.textContent = monthlyPayment.toFixed(2);
     totalPaymentBox.textContent = totalPayment.toFixed(2);
+
+    if (ma == 0 || mt == 0 || mi == 0){
+      resultModal.classList.add("hidden");
+      previewModal.classList.remove("hidden");
+    } else {
+        resultModal.classList.remove("hidden");
+  previewModal.classList.add("hidden");
+    }
   }
 }
 
@@ -57,6 +65,7 @@ mortgageForm.addEventListener("submit", (e) => {
   );
   if (!radioInput) {
     radioContainer.classList.add("error");
+    validity = false
   } else {
     radioContainer.classList.remove("error");
     validity == false ? (validity = false) : (validity = true);
