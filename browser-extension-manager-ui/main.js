@@ -106,7 +106,8 @@ document.addEventListener('click', (event) => {
     
     extensionsList[extensionIndex].isHidden = true
     console.log(extensionsList)
-    filterExtensions(extensionsList, currentFilter)
+    
+    currentFilter == "all" ? renderUi(extensionsList) : filterExtensions(extensionsList, currentFilter)
   };
 });
 
