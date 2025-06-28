@@ -5,166 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Multi Step Form</title>
+  <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-[#f0f6ff]">
-  <style>
-    :root {
-
-      --Marine-blue: #02295a;
-      --Purplish-blue: #473dff;
-      --Pastel-blue: #adbeff;
-      --Light-blue: #bfe2fd;
-      --Strawberry-red: #ed3548;
-
-      --Cool-gray: #9699ab;
-      --Light-gray: #d6d9e6;
-      --Magnolia: #f0f6ff;
-      --Alabaster: #fafbff;
-      --White: #ffffff;
-    }
-    h1, label {
-      color: #02295a;
-      font-weight: bold;
-    }
-
-    .switch {
-      --button-width: 3.5em;
-      --button-height: 2em;
-      --toggle-diameter: 1.5em;
-      --button-toggle-offset: calc((var(--button-height) - var(--toggle-diameter)) / 2);
-      --toggle-shadow-offset: 10px;
-      --toggle-wider: 3em;
-      --color-grey: #cccccc;
-      --color-green: #473dff;
-    }
-
-    .slider {
-      display: inline-block;
-      width: var(--button-width);
-      height: var(--button-height);
-      background-color: var(--color-grey);
-      border-radius: calc(var(--button-height) / 2);
-      position: relative;
-      transition: 0.3s all ease-in-out;
-    }
-
-    .slider::after {
-      content: "";
-      display: inline-block;
-      width: var(--toggle-diameter);
-      height: var(--toggle-diameter);
-      background-color: #fff;
-      border-radius: calc(var(--toggle-diameter) / 2);
-      position: absolute;
-      top: var(--button-toggle-offset);
-      transform: translateX(var(--button-toggle-offset));
-      box-shadow: var(--toggle-shadow-offset) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
-      transition: 0.3s all ease-in-out;
-    }
-
-    .switch input[type="checkbox"]:checked+.slider {
-      background-color: var(--color-green);
-    }
-
-    .switch input[type="checkbox"]:checked+.slider::after {
-      transform: translateX(calc(var(--button-width) - var(--toggle-diameter) - var(--button-toggle-offset)));
-      box-shadow: calc(var(--toggle-shadow-offset) * -1) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
-    }
-
-    .switch input[type="checkbox"] {
-      display: none;
-    }
-
-    .switch input[type="checkbox"]:active+.slider::after {
-      width: var(--toggle-wider);
-    }
-
-    .switch input[type="checkbox"]:checked:active+.slider::after {
-      transform: translateX(calc(var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)));
-    }
-
-    .add-on-label {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      cursor: pointer;
-      user-select: none;
-    }
-
-    .hidden-checkbox {
-      position: absolute;
-      opacity: 0;
-      height: 0;
-      width: 0;
-    }
-
-    .checkmark {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      border: 2px solid #ccc;
-      border-radius: 4px;
-      transition: all 0.2s ease;
-      position: relative;
-    }
-
-    .checkmark::after {
-      content: "";
-      position: absolute;
-      display: none;
-      left: 6px;
-      top: 2px;
-      width: 5px;
-      height: 10px;
-      border: solid white;
-      border-width: 0 2px 2px 0;
-      transform: rotate(45deg);
-    }
-
-    .hidden-checkbox:checked~.checkmark {
-      background-color: #3b82f6;
-      /* Blue-500 */
-      border-color: #3b82f6;
-    }
-
-    .hidden-checkbox:checked~.checkmark::after {
-      display: block;
-    }
-
-    .add-on-content.active {
-      border: 2px solid #473dff;
-      background-color: #f0f6ff;
-    }
-
-    .step {
-      /* opacity: 0; */
-      display: none;
-    }
-
-    .step.active {
-      opacity: 1;
-      display: block;
-      transition: all 0.3s ease-in-out;
-      height: auto;
-      animation: fadeIn 1s forwards;
-    }
-
-    @keyframes fadeIn {
-      from {
-        display: block;
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-  </style>
   <div class="flex flex-col md:flex-row md:p-3 md:bg-white max-w-[62rem] m-auto text-[#9699ab]">
     <img src="images/bg-sidebar-mobile.svg" alt="" class="md:hidden">
-    <div class="hidden md:block w-1/3 bg-[url('images/bg-sidebar-desktop.svg')] bg-cover rounded-xl p-10 m-6 h-[40rem]">
+    <div class="hidden md:block w-1/3 bg-[url('images/bg-sidebar-desktop.svg')] bg-cover rounded-xl p-10 m-6 md:h-[40rem]">
       <div class="flex gap-4 items-center text-white mb-8">
         <button class="step-btn text-white w-10 h-10 border-2 rounded-full hover:bg-white hover:text-blue-500"
           data-step-num="1">1</button>
@@ -198,7 +47,7 @@
         </div>
       </div>
     </div>
-    <div class="w-2/3 flex flex-col justify-between">
+    <div class="md:w-2/3 flex flex-col justify-between">
 
       <div class="relative -top-40 md:top-auto">
         <div class="flex gap-4 relative md:hidden -top-14 m-auto w-fit">
@@ -211,7 +60,7 @@
           <button class="step-btn text-white w-10 h-10 border-2 rounded-full hover:bg-white hover:text-blue-500"
             data-step-num="4">4</button>
         </div>
-        <div class="bg-white rounded-2xl m-6 p-10 pb-0 relative">
+        <div class="bg-white rounded-2xl m-6 p-10 relative">
           <form action="" id="multi-form">
 
             <!-- step 1 -->
@@ -220,15 +69,15 @@
               <p class="my-3 text-xl">Please provide your name, email address, and phone number.</p>
               <div class="mb-6">
                 <label for="" class="block">Name</label>
-                <input type="text" placeholder="e.g. Stephen King" class="border-2 w-full p-3 rounded-md">
+                <input type="text" name="userName" placeholder="e.g. Stephen King" class="border-2 w-full p-3 rounded-md">
               </div>
               <div class="mb-6">
                 <label for="" class="block">Email Address</label>
-                <input type="email" placeholder="e.g. stephenking@lorem.com" class="border-2 w-full p-3 rounded-md">
+                <input type="email" name="userEmail" placeholder="e.g. stephenking@lorem.com" class="border-2 w-full p-3 rounded-md">
               </div>
               <div class="mb-6">
                 <label for="" class="block">Phone Number</label>
-                <input type="tel" placeholder="e.g. +1 234 567 890" class="border-2 w-full p-3 rounded-md">
+                <input type="tel" name="userTel" placeholder="e.g. +1 234 567 890" class="border-2 w-full p-3 rounded-md">
               </div>
             </div>
 
@@ -283,244 +132,6 @@
       </div>
     </div>
   </div>
+  <script src="main.js"></script>
 </body>
-<script>
-  const addOns = [
-    {
-      name: "Online Services",
-      description: "Access to multiplayer games",
-      perMo: 1
-    },
-    {
-      name: "Larger Storage",
-      description: "Extra 1TB of cloud save",
-      perMo: 2
-    },
-    {
-      name: "Customizable profile",
-      description: "Custom theme on your profile",
-      perMo: 2
-    }
-  ]
-
-  const plans = [
-    {
-      name: "Arcade",
-      perMo: 9
-    },
-    {
-      name: "Advanced",
-      perMo: 12
-    },
-    {
-      name: "Pro",
-      perMo: 15
-    }
-  ]
-
-  let currentStep = 1;
-  let userPeriod = "month";
-  let userPlan = '';
-  let userPlanPrice = '';
-  let userAddOn = [];
-
-  const checkSwitch = document.getElementById('check-switch');
-
-  const multiForm = document.getElementById('multi-form');
-
-  const goBack = document.getElementById('go-back');
-  const nextStep = document.getElementById('next-step');
-  const confirmBtn = document.getElementById('confirm-btn');
-  const planBox = document.getElementById('plan-box');
-  const addOnsBox = document.getElementById('add-ons-box');
-  const finishingUpBox = document.getElementById('finishing-up-box');
-
-  const dataStepNum = document.querySelectorAll('#step-num')
-  const stepBtns = document.querySelectorAll('.step-btn')
-
-  checkSwitch.addEventListener('change', () => {
-    checkSwitch.checked ? userPeriod = "year" : userPeriod = "month"
-    updateUI()
-    userAddOn = []
-  });
-
-
-  function renderPlan(){
-        planBox.innerHTML = ""
-    plans.forEach(plan => {
-      const newDiv = document.createElement('label'); // Use label instead of button
-      buttonClasses = ['plan-btn', 'flex', 'gap-4', 'my-4', 'p-3', 'w-full', 'md:w-1/3', 'md:flex-col', 'border-2', 'rounded-md', 'cursor-pointer', 'hover:border-purple-500', 'transition-colors'];
-      buttonClasses.forEach(cls => newDiv.classList.add(cls));
-
-      // Add radio input and button content
-      newDiv.innerHTML = `
-  <input type="radio" name="plan" value="${plan.name}" class="hidden peer" data-price = "$${userPeriod == "month" ? plan.perMo + "/mo" : (plan.perMo * 10) + "/yr"}">
-  <div class="flex gap-4 md:flex-col md:items-start items-center peer-checked:border-purple-500 peer-checked:bg-purple-50 rounded p-2 w-full">
-    <img src="images/icon-${plan.name.toLowerCase()}.svg" alt="${plan.name}" class="w-10 md:mb-6">
-    <div class="text-left">
-      <p class="font-semibold">${plan.name}</p>
-      <p>$${userPeriod == "month" ? plan.perMo + "/mo" : (plan.perMo * 10) + "/yr"}</p>
-      ${userPeriod == "year" ? "<p class='font-semibold text-sm'>2 months free</p>" : ""} 
-    </div>
-  </div>
-`;
-      planBox.appendChild(newDiv);
-
-
-      // Add event listener to handle selection
-      newDiv.addEventListener('click', function () {
-        // Unselect all other plan buttons
-        document.querySelectorAll('.plan-btn').forEach(btn => {
-          btn.classList.remove('border-purple-500', 'bg-purple-50');
-          btn.querySelector('input[type="radio"]').checked = false;
-        });
-
-        // Select this one
-        const thisPlan = this.querySelector('input[type="radio"]')
-        this.classList.add('border-purple-500', 'bg-purple-50');
-        thisPlan.checked = true;
-        userPlan = thisPlan.value
-        userPlanPrice = thisPlan.dataset.price
-      })
-
-    });
-
-  }
-
-  function renderAddOn(){
-        addOnsBox.innerHTML = ""
-    addOns.forEach(addOn => {
-      const newDiv = document.createElement('div')
-      // newDiv.classList.add('')
-      newDiv.innerHTML = `
-      <div class="add-on-content flex justify-between items-center my-4 p-4 border-2 rounded-md">
-        <div class="flex items-center gap-4"> 
-          <label class="add-on-label">
-            <input type="checkbox" class="add-on-check hidden-checkbox" value="${addOn.name}" data-add-on-price="${userPeriod == "month" ? addOn.perMo + "/mo" : (addOn.perMo * 10) + "/yr"}">
-            <span class="checkmark"></span>
-          </label>
-          <div>
-            <p class="font-semibold text-xl text-[#02295a]">${addOn.name}</p>
-            <p>${addOn.description}</p>
-          </div>
-        </div>
-        <p class="text-[#473dff]">+$${userPeriod == "month" ? addOn.perMo + "/mo" : (addOn.perMo * 10) + "/yr"}
-      </div>
-    `
-      addOnsBox.appendChild(newDiv);
-
-
-      document.querySelectorAll('.add-on-check').forEach(addOn => {
-        addOn.addEventListener('change', function () {
-          document.querySelectorAll('.add-on-check').forEach(el => {
-            const parentAddOn = addOn.closest('.add-on-content')
-            userAddOnObj = {
-              name : addOn.value, 
-              price : addOn.dataset.addOnPrice
-            }
-            if (addOn.checked == true) {
-              parentAddOn.classList.add('active')
-              const exists = userAddOn.some(item => item['name'] === userAddOnObj['name']);
-
-              if (!exists){
-                userAddOn.push(userAddOnObj)
-              }
-            } else {
-              userAddOn = userAddOn.filter(item => item['name'] !== userAddOnObj['name']);
-              parentAddOn.classList.remove('active')
-            };
-          });
-        });
-      });
-
-    });
-
-  }
-
-  function renderFinishingUp(){
-    
-    finishingUpBox.innerHTML = ''
-    const newDiv = `
-      <div>
-        <div class="bg-[#f0f6ff] p-4">
-          <p class="font-semibold">${userPlan}(${userPeriod})</p>
-          <div class="flex justify-between">
-            <button class="underline">Change</button>
-            <p class="font-semibold ml-auto">+${userPlanPrice}</p>
-          </div>
-          <hr class="my-3">
-          ${
-            userAddOn.map(addOn =>
-              `
-                <div class="flex justify-between mb-3">
-                  <p>${addOn.name}</p>
-                  <p class="ml-auto">+$${addOn.price}</p>
-                </div>
-              `
-            ).join(' ')
-          }
-        </div>
-        <div class="flex justify-between p-4 my-3">
-          <p>Total(per ${userPeriod})</p>
-          <p class="text-[#473dff] text-xl font-semibold">
-            +$${
-              (userAddOn.reduce((total, item) => {
-                const totalPrice = parseFloat(item.price.split('/')[0]);
-                const period = '/'+item.price.split('/')
-                return total += totalPrice;
-              }, 0) 
-              + parseFloat(userPlanPrice.match(/\d+(\.\d+)?/)[0]))
-              + '/' + userAddOn[0].price.split('/')[1] 
-            }  
-          </p>
-  
-        </div>
-      </div>
-    `
-
-    finishingUpBox.innerHTML = newDiv
-
-  }
-
-  function updateUI() {
-    currentStep <= 1 ? goBack.classList.add('hidden') : goBack.classList.remove('hidden');
-    currentStep == 4 ? (nextStep.classList.add('hidden'), confirmBtn.classList.remove('hidden')) : (nextStep.classList.remove('hidden'), confirmBtn.classList.add('hidden'));
-    currentStep == 5 ? (nextStep.classList.add('hidden'), confirmBtn.classList.add('hidden'), goBack.classList.add('hidden')) : ''
-
-
-
-    document.querySelectorAll('.step').forEach(step => step.classList.remove('active'))
-    const currentStepElement = document.querySelector(`.step[data-step="${currentStep}"]`);
-    currentStepElement ? currentStepElement.classList.add('active') : ""
-
-  };
-
-
-  multiForm.addEventListener('submit', e => {
-    e.preventDefault()
-  })
-
-  stepBtns.forEach(stepBtn => {
-    stepBtn.addEventListener('click', () => {
-      currentStep = Number(stepBtn.dataset.stepNum)
-      updateUI()
-    })
-  });
-
-  confirmBtn.addEventListener('click', ()=>{
-    currentStep++;
-    updateUI();
-  })
-
-  nextStep.addEventListener('click', () => {
-    currentStep++;
-    updateUI();
-  });
-
-  goBack.addEventListener('click', () => {
-    currentStep--;
-    updateUI();
-  })
-</script>
-
 </html>
