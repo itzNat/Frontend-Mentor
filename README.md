@@ -12,12 +12,13 @@ A collection of my completed challenges from [Frontend Mentor](https://www.front
 |----|----------------------------------------------|---------------------------------|------------  |
 | 01 | [3-column-preview-card-component]            | HTML, Tailwind CSS              | Newbie       |
 | 02 | [browser-extension-manager-ui]               | HTML, Tailwind CSS, JavaScript  | Junior       |
-| 03 | [multi-step-form]                            | HTML, Tailwind CSS, JavaScript  | Advanced     |
-| 03 | [newsletter-sign-up-with-success-message]    | HTML, Tailwind CSS, JavaScript  | Junior       |
-| 04 | [notifications-page]                         | HTML, Tailwind CSS, JavaScript  | Junior       |
-| 05 | [product-preview-card-component]             | HTML, Tailwind CSS              | Newbie       |
-| 06 | [single-price-grid-component]                | HTML, CSS                       | Newbie       |
-| 07 | [static-job-listings]                        | HTML, Tailwind CSS, JavaScript  | Intermediate |
+| 03 | [mortgage-repayment-calculator]              | HTML, Tailwind CSS, JavaScript  | Junior       |
+| 04 | [multi-step-form]                            | HTML, Tailwind CSS, JavaScript  | Advanced     |
+| 05 | [newsletter-sign-up-with-success-message]    | HTML, Tailwind CSS, JavaScript  | Junior       |
+| 06 | [notifications-page]                         | HTML, Tailwind CSS, JavaScript  | Junior       |
+| 07 | [product-preview-card-component]             | HTML, Tailwind CSS              | Newbie       |
+| 08 | [single-price-grid-component]                | HTML, CSS                       | Newbie       |
+| 09 | [static-job-listings]                        | HTML, Tailwind CSS, JavaScript  | Intermediate |
 
 
 ## 🚀 Features
