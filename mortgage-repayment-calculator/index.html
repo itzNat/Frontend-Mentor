@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mortgage Repayment Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-[#e3f3fd] md:flex items-center justify-center min-h-screen">
+  <div class="bg-white h-full md:flex m-auto max-w-[80rem] rounded-[2rem]">
+    <form id="mortgage-form" class="px-7 py-11 md:w-1/2 md:px-14">
+      <div class="md:flex justify-between">
+        <h2 class="text-[#122f3f] text-2xl font-bold">Mortgage Calculator</h2>
+        <button type="reset" id="clear-btn" class="underline mt-2 mb-5">Clear All</button>
+      </div>
+      <div>
+        <div>
+          <div class="input-container mb-5">
+            <p class="mb-3">Mortgage Amount</p>
+            <div class="div-input font-semibold flex">
+              <label for="" class="bg-[#e3f3fd] px-5 py-3">€</label>
+              <input type="number" name="mortgageAmount" class="w-full p-3 text-[#122f3f]">
+            </div>
+            <p class="error-message hidden text-[#d73328]">This Field is required</p>
+          </div>
+
+        </div>
+        <div>
+          <div class="input-container mb-5">
+            <p class="mb-3">Mortgage Term</p>
+            <div class="div-input font-semibold flex">
+              <input type="number" name="mortgageTerm" class="w-full p-3 text-[#122f3f]">
+              <label for="" class="bg-[#e3f3fd] px-5 py-3">years</label>
+            </div>
+            <p class="error-message hidden text-[#d73328]">This Field is required</p>
+          </div>
+        </div>
+        <div>
+          <div class="input-container mb-5">
+            <p class="mb-3">Interest Rate</p>
+            <div class="div-input font-semibold flex">
+              <input type="number" name="mortgageInterest" class="w-full p-3 text-[#122f3f]">
+              <label for="" class="bg-[#e3f3fd] px-5 py-3">%</label>
+            </div>
+            <p class="error-message hidden text-[#d73328]">This Field is required</p>
+          </div>
+
+        </div>
+        <div>
+          <p class="mb-3">Mortgage Type</p>
+          <div class="radio-container text-[#122f3f] font-bold">
+            <div class="radio-div p-3 mb-2 hover:border-[#d7da2f]">
+              <input type="radio" name="mortgageType" value="Repayment" class="mr-3">
+              <label for="">Repayment</label>
+            </div>
+            <div class="radio-div p-3 mb-2 hover:border-[#d7da2f]">
+              <input type="radio" name="mortgageType" value="Interest" class="mr-3">
+              <label for="">Interest Only</label>
+            </div>
+            <p class="error-message hidden font-normal text-[#d73328]">This Field is required</p>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="bg-[#d7da2f] text-[#122f3f] font-bold p-4 w-full rounded-full mt-5 mb-8">
+        <img src="images/icon-calculator.svg" alt="icon-calculator" class="inline-block">
+        Calculator Repayments
+      </button>
+    </form>
+
+    <div
+      class="bg-[#122f3f] text-[#e3f3fd] px-7 py-11 md:w-1/2 md:rounded-bl-[10rem] flex flex-col justify-center items-center md:px-14">
+      <div id="preview-modal" class="text-center flex flex-col justify-center items-center h-full">
+        <div>
+
+          <img src="images/illustration-empty.svg" alt="illustration-empty" class="m-auto">
+          <h2 class="text-2xl m-5 font-semibold">Results shown here</h2>
+          <p>Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
+        </div>
+      </div>
+      <div id="result-modal" class="hidden">
+        <h2 class="text-white text-2xl font-semibold">Your Results</h2>
+        <p class="my-6">Your results are shown below based on the information you provided. To adjust the results, edit
+          the form and
+          click "Calculate repayments" again.</p>
+        <div class="px-4 py-7 m-3 border-t-4 border-t-[#d7da2f] bg-[#081922] rounded-xl">
+          <p>Your monthly repayments</p>
+          <h1 id="monthly-payment-box" class="text-[#d7da2f] font-semibold text-6xl">0</h1>
+          <hr class="h-1 my-6">
+          <p>Total you'll repay over the term</p>
+          <h2 id="total-payment-box" class="text-2xl">0</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

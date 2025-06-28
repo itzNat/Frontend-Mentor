@@ -1,0 +1,39 @@
+.input-container.error .div-input {
+  border: 1px solid #d73328;
+}
+
+.input-container.error .div-input label {
+  background-color: #d73328;
+}
+
+.input-container.error .error-message {
+  display: block;
+}
+
+.radio-container.error .error-message {
+  display: block;
+}
+
+input:focus {
+  outline: none;
+}
+
+.div-input:has(input:focus) {
+  border-color: #d7da2f;
+}
+
+.div-input:has(input:focus) label {
+  background-color: #d7da2f;
+}
+
+.div-input,
+.radio-div {
+  border: 1px solid #4e6e7e;
+  overflow: hidden;
+  border-radius: 7px;
+}
+
+.radio-div:has(input[type="radio"]:checked) {
+  background-color: #fcfdca;
+  border-color: #d7da2f;
+}
