@@ -17,10 +17,10 @@
 --White: #ffffff;
 }
 </style>
-<body class="bg-[#242742] min-h-screen flex items-center justify-center text-[#242742]">
+<body class="bg-[#242742] min-h-screen md:flex flex-col items-center justify-center text-[#242742]">
   <div class="flex flex-col md:flex-row bg-white md:rounded-2xl overflow-hidden md:p-4 max-w-[60rem]" id="hero-modal">
-    <img src="images/illustration-sign-up-mobile.svg" alt="" class="md:hidden">
-    <div class="m-8">
+    <img src="images/illustration-sign-up-mobile.svg" alt="illustration-sign-up-mobile" class="md:hidden">
+    <div class="m-8 md:flex flex-col justify-center">
       <h1 class="text-4xl font-semibold">Stay updated!</h1>
       <p class="my-6">Join 60,000+ product managers receiving monthly updates on:</p>
       <div>
@@ -44,25 +44,35 @@
         </div>
       </div>
       <form action="" id="email-form">
-        <div class="flex flex-col my-8">
-          <label for="" class="font-semibold my-4 flex justify-between">Email Address <span class="text-[#ff6257] hidden" id="error-text">Valid email required</span></label>
-        <input type="text" name="email" id="" placeholder="email@company.com" class="border-2 p-4 rounded-md">
+        <div class="email-container flex flex-col my-8">
+          <label for="" class="my-4 flex justify-between">Email Address <span class="text-[#ff6257] hidden error-text">Valid email required</span></label>
+        <input type="text" name="email" id="email" placeholder="email@company.com" class="email border-2 p-4 rounded-md">
         </div>
         <button type="submit" name="button" class="w-full bg-[#242742] text-white p-4 rounded-md hover:bg-[#ff6257]">Subscribe to monthly newsletter</button>
       </form>
     </div>
-    <img src="images/illustration-sign-up-desktop.svg" alt="" class="hidden md:block w-1/2">
+    <img src="images/illustration-sign-up-desktop.svg" alt="illustration-sign-up-desktop" class="hidden md:block w-1/2">
   </div>
 
   <!-- success modal -->
    <div class="bg-white min-h-screen p-10 md:rounded-3xl md:min-h-fit md:max-w-[30rem] hidden" id="success-modal">
      <div class="my-[38%] md:my-auto">
-      <img src="images/icon-success.svg" alt="">
+      <img src="images/icon-success.svg" alt="icon-success">
       <h1 class="text-4xl font-semibold my-8">Thanks for subscribing!</h1>
       <p>A confirmation email has been sent to <span class="font-bold">ash@loremcompany</span>. Please open it and click the button inside to confirm your subscription</p>
     </div>
     <button class="bg-[#242742] text-white w-full mt-10 p-4 rounded-md hover:bg-[#ff6257]" id="dismiss-btn">Dismiss message</button>
    </div>
+
+
+    <h4 class="text-center text-lg md:text-xl font-medium text-gray-700 dark:text-gray-300 mb-8 mt-12 px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-sm">
+      Challenge by  
+      <a href="https://www.frontendmentor.io?ref=itznat" class="text-blue-600 dark:text-blue-400 hover:underline">Frontend Mentor</a>, 
+      Coded by 
+      <a href="https://github.com/itzNat">
+        <span class="font-semibold text-purple-600 dark:text-purple-400">Itz Nat</span>.
+      </a>    
+    </h4>
 
    <script src="main.js"></script>
 </body>

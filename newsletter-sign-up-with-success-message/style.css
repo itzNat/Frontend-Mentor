@@ -3,3 +3,13 @@
 body {
   font-family: roboto;
 }
+
+form.error .email {
+  border-color: #ff6257;
+  color: #ff6257;
+  background-color: #ffdad8;
+}
+
+form.error .error-text{
+  display: block;
+}

@@ -2,7 +2,6 @@ const heroModal = document.getElementById("hero-modal");
 const successModal = document.getElementById("success-modal");
 const emailForm = document.getElementById("email-form");
 const dismissBtn = document.getElementById("dismiss-btn");
-const errorText = document.getElementById("error-text");
 
 function isValidEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -10,12 +9,7 @@ function isValidEmail(email) {
 }
 
 function clearErrorMessage(){
-  emailForm.email.classList.remove('border-[#ff6257]')
-  emailForm.email.classList.remove('text-[#ff6257]')
-  emailForm.email.classList.remove('bg-[#ffc5c1]');
-  emailForm.email.classList.add('bg-white');
-  emailForm.email.classList.add('bg-[#242742]');
-  errorText.classList.add('hidden')
+  emailForm.classList.remove('error')
 };
 
 document.addEventListener("submit", (e) => {
@@ -25,17 +19,12 @@ document.addEventListener("submit", (e) => {
     heroModal.classList.add("hidden");
     successModal.classList.remove("hidden");
   } else {
-    emailForm.email.classList.remove('bg-[#242742]')
-    // emailForm.email.classList.remove('text-white')
-    emailForm.email.classList.add('bg-[#ffc5c1]')
-    emailForm.email.classList.add('border-[#ff6257]')
-    emailForm.email.classList.add('text-[#ff6257]')
-    errorText.classList.remove('hidden')
+    emailForm.classList.add('error')
     setTimeout(clearErrorMessage, 2500)
   }
 });
 
-document.addEventListener("click", () => {
+dismissBtn.addEventListener("click", () => {
   successModal.classList.add("hidden");
   heroModal.classList.remove("hidden");
 });
