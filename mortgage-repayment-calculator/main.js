@@ -8,7 +8,7 @@ const resultModal = document.getElementById("result-modal");
 const monthlyPaymentBox = document.getElementById("monthly-payment-box");
 const totalPaymentBox = document.getElementById("total-payment-box");
 
-document.querySelectorAll('input[type="number"]').forEach((input) => {
+document.querySelectorAll('input[type="text"]').forEach((input) => {
   input.addEventListener("input", function () {
     validateInput(this);
   });
@@ -16,11 +16,15 @@ document.querySelectorAll('input[type="number"]').forEach((input) => {
 
 function validateInput(input) {
   const value = input.value.trim();
-  input.closest(`.input-container`).classList.remove("error");
+  const parentInput = input.closest(`.input-container`);
+  parentInput.classList.remove("error");
+  parentInput.classList.remove("invalid");
   if (!value) {
-    const parentInput = input.closest(`.input-container`);
     parentInput.classList.add("error");
     validity = false;
+  } else if (!Number(value)) {
+    validity = false;
+    parentInput.classList.add("invalid");
   }
 
   value

@@ -1,12 +1,16 @@
-.input-container.error .div-input {
+.input-container.error .div-input, .input-container.invalid .div-input {
   border: 1px solid #d73328;
 }
 
-.input-container.error .div-input label {
+.input-container.error .div-input label, .input-container.invalid .div-input label {
   background-color: #d73328;
 }
 
 .input-container.error .error-message {
+  display: block;
+}
+
+.input-container.invalid .invalid-message {
   display: block;
 }
 
