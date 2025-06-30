@@ -14,9 +14,38 @@
 }
 
 h1,
-label {
+label, input {
   color: #02295a;
+}
+
+label {
+  font-weight: 500;
+}
+
+input {
+  font-weight: 600;
+}
+
+h1 {
   font-weight: bold;
+}
+
+.step-btn.active {
+  background-color: white;
+  color : #473dff;
+}
+
+.input-box input:focus {
+  outline: 1px solid #02295a;
+}
+.input-box.error input{
+  border-color: #ed3548;
+}
+.input-box.error input:focus {
+  border-color: transparent;
+}
+.input-box.error .error-message{
+  display: block;
 }
 
 .switch {
@@ -121,6 +150,11 @@ label {
 
 .hidden-checkbox:checked~.checkmark::after {
   display: block;
+}
+
+.plan-label.selected {
+  border-color: #473dff;
+  background-color: #473dff13;
 }
 
 .add-on-content.active {

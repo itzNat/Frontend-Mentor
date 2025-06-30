@@ -33,6 +33,9 @@ const plans = [
 
 let currentStep = 1;
 let userPeriod = "month";
+let selectedPeriod = "month";
+let selectedAddOn = ""
+let selectedPlan = ""
 let userPlan = "";
 let userPlanPrice = "";
 let userAddOn = [];
@@ -48,7 +51,6 @@ const planBox = document.getElementById("plan-box");
 const addOnsBox = document.getElementById("add-ons-box");
 const finishingUpBox = document.getElementById("finishing-up-box");
 
-const dataStepNum = document.querySelectorAll("#step-num");
 const stepBtns = document.querySelectorAll(".step-btn");
 
 checkSwitch.addEventListener("change", () => {
@@ -57,12 +59,68 @@ checkSwitch.addEventListener("change", () => {
   userAddOn = [];
 });
 
+function renderUI() {
+
+  stepBtns.forEach(stepBtn => {
+    currentStep == Number(stepBtn.dataset.stepNum) ? stepBtn.classList.add('active') : stepBtn.classList.remove('active')
+  })
+
+  currentStep <= 1
+    ? goBack.classList.add("hidden")
+    : goBack.classList.remove("hidden");
+  currentStep == 4
+    ? (nextStep.classList.add("hidden"), confirmBtn.classList.remove("hidden"))
+    : (nextStep.classList.remove("hidden"), confirmBtn.classList.add("hidden"));
+  currentStep == 5
+    ? (nextStep.classList.add("hidden"),
+      confirmBtn.classList.add("hidden"),
+      goBack.classList.add("hidden"))
+    : "";
+
+  document
+    .querySelectorAll(".step")
+    .forEach((step) => step.classList.remove("active"));
+  const currentStepElement = document.querySelector(
+    `.step[data-step="${currentStep}"]`
+  );
+  currentStepElement ? currentStepElement.classList.add("active") : "";
+
+}
+
+function checkPersonalInfo(){
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const isEmail = emailRegex.test(multiForm.userEmail.value);
+  !isEmail ? multiForm.userEmail.value = '' : ''
+
+  const telRegex = /^\+?(\d{1,3})?[-. ]?\(?\d{3}\)?[-. ]?\d{3}[-. ]?\d{4}$/;
+  const isTel = telRegex.test(multiForm.userTel.value);
+  !isTel ? multiForm.userTel.value = '' : ''
+
+  if (multiForm.userName.value && isEmail && isTel){
+    return true;
+  } else {
+    currentStep = 1;
+    errorPersonalInfo();
+    return false;
+  }
+}
+
+function errorPersonalInfo(){
+  document.querySelectorAll('.personal-input').forEach(personalInput => {
+    const parentElement = personalInput.closest('.input-box')
+    personalInput.addEventListener('input', ()=>{
+      personalInput.value ? parentElement.classList.remove('error') : parentElement.classList.add('error')
+    })
+    personalInput.value ? parentElement.classList.remove('error') : parentElement.classList.add('error')
+  })
+}
+
 function renderPlan() {
   planBox.innerHTML = "";
   plans.forEach((plan) => {
     const newDiv = document.createElement("label"); // Use label instead of button
-    buttonClasses = [
-      "plan-btn",
+    newDiv.classList.add(
+      "plan-label",
       "flex",
       "gap-4",
       "my-4",
@@ -75,8 +133,8 @@ function renderPlan() {
       "cursor-pointer",
       "hover:border-purple-500",
       "transition-colors",
-    ];
-    buttonClasses.forEach((cls) => newDiv.classList.add(cls));
+      `${(selectedPlan == plan.name && selectedPeriod == userPeriod) ? 'selected' : 'unSelected'}`
+  );
 
     // Add radio input and button content
     newDiv.innerHTML = `
@@ -85,7 +143,7 @@ function renderPlan() {
   }" class="hidden peer" data-price = "$${
       userPeriod == "month" ? plan.perMo + "/mo" : plan.perMo * 10 + "/yr"
     }">
-  <div class="flex gap-4 md:flex-col md:items-start items-center peer-checked:border-purple-500 peer-checked:bg-purple-50 rounded p-2 w-full">
+  <div class="flex gap-4 md:flex-col md:items-start items-center rounded p-2 w-full">
     <img src="images/icon-${plan.name.toLowerCase()}.svg" alt="${
       plan.name
     }" class="w-10 md:mb-6">
@@ -107,17 +165,18 @@ function renderPlan() {
     // Add event listener to handle selection
     newDiv.addEventListener("click", function () {
       // Unselect all other plan buttons
-      document.querySelectorAll(".plan-btn").forEach((btn) => {
-        btn.classList.remove("border-purple-500", "bg-purple-50");
+      document.querySelectorAll(".plan-label").forEach((btn) => {
+        btn.classList.remove("selected");
         btn.querySelector('input[type="radio"]').checked = false;
       });
 
       // Select this one
       const thisPlan = this.querySelector('input[type="radio"]');
-      this.classList.add("border-purple-500", "bg-purple-50");
+      this.classList.add("selected");
       thisPlan.checked = true;
-      userPlan = thisPlan.value;
+      selectedPlan = thisPlan.value;
       userPlanPrice = thisPlan.dataset.price;
+      selectedPeriod = userPeriod;
     });
   });
 }
@@ -135,7 +194,11 @@ function renderAddOn() {
               addOn.name
             }" data-add-on-price="${
       userPeriod == "month" ? addOn.perMo + "/mo" : addOn.perMo * 10 + "/yr"
-    }">
+    }" ${
+      userAddOn.some(
+              (item) => item["name"] == addOn.name
+            ) ? 'checked' : 'unchecked'
+    }>
             <span class="checkmark"></span>
           </label>
           <div>
@@ -184,13 +247,13 @@ function renderFinishingUp() {
   const newDiv = `
       <div>
         <div class="bg-[#f0f6ff] p-4">
-          <p class="font-semibold">${userPlan}(${userPeriod})</p>
+          <p class="font-semibold">${selectedPlan}(${selectedPeriod})</p>
           <div class="flex justify-between">
             <button class="underline">Change</button>
             <p class="font-semibold ml-auto">+${userPlanPrice}</p>
           </div>
           <hr class="my-3">
-          ${userAddOn
+          ${userAddOn.length >= 1 ? userAddOn
             .map(
               (addOn) =>
                 `
@@ -200,20 +263,22 @@ function renderFinishingUp() {
                 </div>
               `
             )
-            .join(" ")}
+            .join(" ") : ''}
         </div>
         <div class="flex justify-between p-4 my-3">
           <p>Total(per ${userPeriod})</p>
           <p class="text-[#473dff] text-xl font-semibold">
             +$${
-              userAddOn.reduce((total, item) => {
+              userAddOn.length >= 1 ? userAddOn.reduce((total, item) => {
                 const totalPrice = parseFloat(item.price.split("/")[0]);
                 const period = "/" + item.price.split("/");
                 return (total += totalPrice);
               }, 0) +
               parseFloat(userPlanPrice.match(/\d+(\.\d+)?/)[0]) +
               "/" +
-              userAddOn[0].price.split("/")[1]
+              userAddOn[0].price.split("/")[1] : parseFloat(userPlanPrice.match(/\d+(\.\d+)?/)[0]) +
+              "/" +
+              userPlanPrice.split("/")[1]
             }  
           </p>
   
@@ -225,26 +290,8 @@ function renderFinishingUp() {
 }
 
 function updateUI() {
-  currentStep <= 1
-    ? goBack.classList.add("hidden")
-    : goBack.classList.remove("hidden");
-  currentStep == 4
-    ? (nextStep.classList.add("hidden"), confirmBtn.classList.remove("hidden"))
-    : (nextStep.classList.remove("hidden"), confirmBtn.classList.add("hidden"));
-  currentStep == 5
-    ? (nextStep.classList.add("hidden"),
-      confirmBtn.classList.add("hidden"),
-      goBack.classList.add("hidden"))
-    : "";
-
-  document
-    .querySelectorAll(".step")
-    .forEach((step) => step.classList.remove("active"));
-  const currentStepElement = document.querySelector(
-    `.step[data-step="${currentStep}"]`
-  );
-  currentStepElement ? currentStepElement.classList.add("active") : "";
-
+  !checkPersonalInfo() ? currentStep = 1 : !selectedPlan ? currentStep = 2 : ''
+  renderUI()
   renderPlan();
   renderAddOn();
   renderFinishingUp();
@@ -257,6 +304,7 @@ multiForm.addEventListener("submit", (e) => {
 stepBtns.forEach((stepBtn) => {
   stepBtn.addEventListener("click", () => {
     currentStep = Number(stepBtn.dataset.stepNum);
+    // stepBtns[currentStep-1].classList.add('selected')
     updateUI();
   });
 });
@@ -267,7 +315,7 @@ confirmBtn.addEventListener("click", () => {
 });
 
 nextStep.addEventListener("click", () => {
-  currentStep++;
+  checkPersonalInfo() ? currentStep++ : errorPersonalInfo();
   updateUI();
 });
 
@@ -275,3 +323,5 @@ goBack.addEventListener("click", () => {
   currentStep--;
   updateUI();
 });
+
+renderUI()

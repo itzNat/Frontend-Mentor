@@ -19,6 +19,7 @@ A collection of my completed challenges from [Frontend Mentor](https://www.front
 | 07 | [product-preview-card-component]             | HTML, Tailwind CSS              | Newbie       |
 | 08 | [single-price-grid-component]                | HTML, CSS                       | Newbie       |
 | 09 | [static-job-listings]                        | HTML, Tailwind CSS, JavaScript  | Intermediate |
+| 10 | [time-tracking-dashboard]                    | HTML, Tailwind CSS, JavaScript  | Junior       |
 
 
 ## 🚀 Features
