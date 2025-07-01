@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <title>Calculator App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="blue-theme bg-[var(--main-bg)] text-[var(--input-text)] flex items-center justify-center min-h-screen">
+  <div class="max-w-[19rem] p-4 md:max-w-[24rem]">
+    <div>
+      <div class="flex">
+        <div class="w-full">
+          <div class="grid grid-cols-3 justify-items-center w-16 ml-auto text-[10px]">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+          </div>
+          <div class="flex justify-between w-full">
+            <p class="text-sm font-bold">calc</p>
+            <div class="flex items-center">
+
+              <p class="mr-4 text-[10px]">THEME</p>
+              <div class="grid grid-cols-3 justify-items-center w-16 gap-2 p-1 bg-[var(--keypad-bg)] rounded-full">
+
+
+                <label class="relative flex items-center cursor-pointer">
+                  <input class="theme-toggle sr-only peer" name="theme-btn" type="radio" data-theme="blue" checked />
+                  <div
+                    class="w-3 h-3 bg-transparent rounded-full peer-checked:bg-[var(--enter-bg)] transition duration-300 ease-in-out">
+                  </div>
+                </label>
+                <label class="relative flex items-center cursor-pointer">
+                  <input class="theme-toggle sr-only peer" name="theme-btn" type="radio" data-theme="white" />
+                  <div
+                    class="w-3 h-3 bg-transparent rounded-full peer-checked:bg-[var(--enter-bg)] transition duration-300 ease-in-out">
+                  </div>
+                </label>
+                <label class="relative flex items-center cursor-pointer">
+                  <input class="theme-toggle sr-only peer" name="theme-btn" type="radio" data-theme="purple" />
+                  <div
+                    class="w-3 h-3 bg-transparent rounded-full peer-checked:bg-[var(--enter-bg)] transition duration-300 ease-in-out">
+                  </div>
+                </label>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="">
+      <input type="text" value="" id="display-input"
+        class="bg-[var(--screen-bg)] w-full p-3 rounded-md mt-4 mb-3 text-right text-4xl font-bold" autocomplete="nope">
+    </div>
+    <div
+      class="grid grid-cols-4 grid-rows-5 justify-items-center gap-3 md:gap-4 bg-[var(--keypad-bg)] text-[var(--num-text)] font-semibold p-4 rounded-md">
+      <button class="num-btn p-13 rounded-md" data-num="7">7</button>
+      <button class="num-btn p-13 rounded-md" data-num="8">8</button>
+      <button class="num-btn p-13 rounded-md" data-num="9">9</button>
+      <button id="del-btn"
+        class="p-13 rounded-md bg-[var(--del-bg)] text-[var(--other-text)] shadow-[0_2px_0px_var(--del-shadow)]"
+        data-num="">DEL</button>
+      <button class="num-btn p-13 rounded-md" data-num="4">4</button>
+      <button class="num-btn p-13 rounded-md" data-num="5">5</button>
+      <button class="num-btn p-13 rounded-md" data-num="6">6</button>
+      <button class="num-btn p-13 rounded-md" data-num="+">+</button>
+      <button class="num-btn p-13 rounded-md" data-num="1">1</button>
+      <button class="num-btn p-13 rounded-md" data-num="2">2</button>
+      <button class="num-btn p-13 rounded-md" data-num="3">3</button>
+      <button class="num-btn p-13 rounded-md" data-num="-">-</button>
+      <button class="num-btn p-13 rounded-md" data-num=".">.</button>
+      <button class="num-btn p-13 rounded-md" data-num="0">0</button>
+      <button class="num-btn p-13 rounded-md" data-num="/">/</button>
+      <button class="num-btn p-13 rounded-md" data-num="*">*</button>
+      <button id="reset-btn"
+        class="bg-[var(--del-bg)] text-[var(--other-text)] w-full row-start-5 col-start-1 row-end-6 col-end-3 shadow-[0_2px_0px_var(--del-shadow)] rounded-md">RESET</button>
+      <button id="eval-btn"
+        class="bg-[var(--enter-bg)] text-[var(--special-text)] w-full row-start-5 col-start-3 row-end-6 col-end-5 shadow-[0_2px_0px_var(--enter-shadow)] rounded-md">=</button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
