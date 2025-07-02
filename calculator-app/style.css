@@ -89,13 +89,13 @@
 }
 
 #del-btn, .num-btn {
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
 }
 
 @media screen and (min-width: 768px) {
   .num-btn, #del-btn{
-    width: 70px;
-    height: 40px;
+    width: 80px;
+    height: 50px;
   }
 }
