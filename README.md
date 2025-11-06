@@ -5,6 +5,9 @@
 A collection of my completed challenges from [Frontend Mentor](https://www.frontendmentor.io), showcasing my frontend development skills.
 
 ---
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=00FFAA&center=true&vCenter=true&width=500&lines=💻+Currently+debugging+life+and+React+components;☕+Running+on+caffeine+and+console.logs;🎨+Tweaking+my+UI+until+it+becomes+a+personality+trait;🐛+Probably+adding+new+bugs+while+fixing+old+ones;⚡+Writing+code,+vibing,+and+minding+my+own+business;🚀+Pushing+pixels+and+pulling+requests" alt="Typing SVG" />
+</p>
 
 ## 📁 Projects List
 
