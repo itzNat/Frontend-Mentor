@@ -1,34 +1,37 @@
-Here's the Frontend Mentor projects compilation i've done so far:
-
 # Frontend Mentor Solutions
 
 ![Frontend Mentor Logo](https://frontendmentor.io/static/images/logo-desktop.svg)
 
 A collection of my completed challenges from [Frontend Mentor](https://www.frontendmentor.io), showcasing my frontend development skills.
 
+---
+
 ## 📁 Projects List
 
-| #  |                    Project                   |            Technologies         |  Difficulty  |
-|----|----------------------------------------------|---------------------------------|------------  |
-| 01 | [3-column-preview-card-component]            | HTML, Tailwind CSS              | Newbie       |
-| 02 | [browser-extension-manager-ui]               | HTML, Tailwind CSS, JavaScript  | Junior       |
-| 03 | [mortgage-repayment-calculator]              | HTML, Tailwind CSS, JavaScript  | Junior       |
-| 04 | [multi-step-form]                            | HTML, Tailwind CSS, JavaScript  | Advanced     |
-| 05 | [newsletter-sign-up-with-success-message]    | HTML, Tailwind CSS, JavaScript  | Junior       |
-| 06 | [notifications-page]                         | HTML, Tailwind CSS, JavaScript  | Junior       |
-| 07 | [product-preview-card-component]             | HTML, Tailwind CSS              | Newbie       |
-| 08 | [single-price-grid-component]                | HTML, CSS                       | Newbie       |
-| 09 | [static-job-listings]                        | HTML, Tailwind CSS, JavaScript  | Intermediate |
-| 10 | [time-tracking-dashboard]                    | HTML, Tailwind CSS, JavaScript  | Junior       |
+| #  | Project | Technologies | Difficulty | Links |
+|----|----------|---------------|-------------|--------|
+| 01 | 3-column-preview-card-component | HTML, Tailwind CSS | 🟢 Newbie | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/3-column-preview-card-component) • [🌐 Live](https://itznat-3-column-preview-card.netlify.app) |
+| 02 | browser-extension-manager-ui | HTML, Tailwind CSS, JavaScript | 🟡 Junior | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/browser-extension-manager-ui) • [🌐 Live](https://itznat-browser-extension-ui.netlify.app) |
+| 03 | mortgage-repayment-calculator | HTML, Tailwind CSS, JavaScript | 🟡 Junior | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/mortgage-repayment-calculator) • [🌐 Live](https://itznat-mortgage-calculator.netlify.app) |
+| 04 | multi-step-form | HTML, Tailwind CSS, JavaScript | 🔴 Advanced | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/multi-step-form) • [🌐 Live](https://itznat-multi-step-form.netlify.app) |
+| 05 | newsletter-sign-up-with-success-message | HTML, Tailwind CSS, JavaScript | 🟡 Junior | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/newsletter-sign-up-with-success-message) • [🌐 Live](https://itznat-newsletter-signup.netlify.app) |
+| 06 | notifications-page | HTML, Tailwind CSS, JavaScript | 🟡 Junior | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/notifications-page) • [🌐 Live](https://itznat-notifications-page.netlify.app) |
+| 07 | product-preview-card-component | HTML, Tailwind CSS | 🟢 Newbie | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/product-preview-card-component) • [🌐 Live](https://itznat-product-preview.netlify.app) |
+| 08 | single-price-grid-component | HTML, CSS | 🟢 Newbie | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/single-price-grid-component) • [🌐 Live](https://itznat-single-price-grid.netlify.app) |
+| 09 | static-job-listings | HTML, Tailwind CSS, JavaScript | 🟠 Intermediate | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/static-job-listings) • [🌐 Live](https://itznat-job-listings.netlify.app) |
+| 10 | time-tracking-dashboard | HTML, Tailwind CSS, JavaScript | 🟡 Junior | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/time-tracking-dashboard) • [🌐 Live](https://itznat-time-tracking.netlify.app) |
 
+---
 
 ## 🚀 Features
 
-- **Responsive Designs**: All projects are fully responsive across devices
-- **Best Practices**: Clean code following modern web standards
-- **Performance Optimized**: Focus on fast loading and accessibility
-- **Interactive Elements**: JavaScript implementations where required
-- **Theme** : Theme changes where required
+- **Responsive Designs**: All projects are fully responsive across devices  
+- **Best Practices**: Clean code following modern web standards  
+- **Performance Optimized**: Focus on fast loading and accessibility  
+- **Interactive Elements**: JavaScript implementations where required  
+- **Theme**: Theme changes where needed  
+
+---
 
 ## 🛠 Technologies Used
 
@@ -37,26 +40,15 @@ A collection of my completed challenges from [Frontend Mentor](https://www.front
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
+---
+
 ## 📌 How to Use
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/itzNat/Frontend-Mentor-.git
-   ```
-2. Navigate to specific project:
-   ```bash
-   cd project-folder
-   ```
-3. Open `index.html` in your browser
+```bash
+# Clone the repo
+git clone https://github.com/itzNat/Frontend-Mentor-.git
 
+# Navigate to a specific project
+cd project-folder
 
-## 📝 Notes
-
-- All designs provided by [Frontend Mentor](https://www.frontendmentor.io)
-- Some projects include bonus features beyond original requirements
-- Feedback and suggestions are welcome!
-
-## 📬 Contact
-
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/Itz_Naht)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/itz-nat?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B6Apxu%2ByLRLSDyUzZHVvQYw%3D%3D) 
+# Open index.html in your browser
