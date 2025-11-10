@@ -11,18 +11,18 @@ A collection of my completed challenges from [Frontend Mentor](https://www.front
 
 ## 📁 Projects List
 
-| #  | Project | Technologies | Difficulty | Links |
+| #  | Project | Technologies | Difficulty | Links | Live |
 |----|----------|---------------|-------------|--------|
-| 01 | 3-column-preview-card-component | HTML, Tailwind CSS | 🟢 Newbie | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/3-column-preview-card-component) • [🌐 Live](https://itznat-3-column-preview-card.netlify.app) |
-| 02 | browser-extension-manager-ui | HTML, Tailwind CSS, JavaScript | 🟡 Junior | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/browser-extension-manager-ui) • [🌐 Live](https://itznat-browser-extension-ui.netlify.app) |
-| 03 | mortgage-repayment-calculator | HTML, Tailwind CSS, JavaScript | 🟡 Junior | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/mortgage-repayment-calculator) • [🌐 Live](https://itznat-mortgage-calculator.netlify.app) |
-| 04 | multi-step-form | HTML, Tailwind CSS, JavaScript | 🔴 Advanced | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/multi-step-form) • [🌐 Live](https://itznat-multi-step-form.netlify.app) |
-| 05 | newsletter-sign-up-with-success-message | HTML, Tailwind CSS, JavaScript | 🟡 Junior | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/newsletter-sign-up-with-success-message) • [🌐 Live](https://itznat-newsletter-signup.netlify.app) |
-| 06 | notifications-page | HTML, Tailwind CSS, JavaScript | 🟡 Junior | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/notifications-page) • [🌐 Live](https://itznat-notifications-page.netlify.app) |
-| 07 | product-preview-card-component | HTML, Tailwind CSS | 🟢 Newbie | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/product-preview-card-component) • [🌐 Live](https://itznat-product-preview.netlify.app) |
-| 08 | single-price-grid-component | HTML, CSS | 🟢 Newbie | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/single-price-grid-component) • [🌐 Live](https://itznat-single-price-grid.netlify.app) |
-| 09 | static-job-listings | HTML, Tailwind CSS, JavaScript | 🟠 Intermediate | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/static-job-listings) • [🌐 Live](https://itznat-job-listings.netlify.app) |
-| 10 | time-tracking-dashboard | HTML, Tailwind CSS, JavaScript | 🟡 Junior | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/time-tracking-dashboard) • [🌐 Live](https://itznat-time-tracking.netlify.app) |
+| 01 | 3-column-preview-card-component | HTML, Tailwind CSS | 🟢 Newbie | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/3-column-preview-card-component) | [🌐 Live](https://itznat-3-column-preview-card.netlify.app) |
+| 02 | browser-extension-manager-ui | HTML, Tailwind CSS, JavaScript | 🟡 Junior | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/browser-extension-manager-ui) | [🌐 Live](https://itznat-browser-extension-ui.netlify.app) |
+| 03 | mortgage-repayment-calculator | HTML, Tailwind CSS, JavaScript | 🟡 Junior | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/mortgage-repayment-calculator) | [🌐 Live](https://itznat-mortgage-calculator.netlify.app) |
+| 04 | multi-step-form | HTML, Tailwind CSS, JavaScript | 🔴 Advanced | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/multi-step-form) | [🌐 Live](https://itznat-multi-step-form.netlify.app) |
+| 05 | newsletter-sign-up-with-success-message | HTML, Tailwind CSS, JavaScript | 🟡 Junior | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/newsletter-sign-up-with-success-message) | [🌐 Live](https://itznat-newsletter-signup.netlify.app) |
+| 06 | notifications-page | HTML, Tailwind CSS, JavaScript | 🟡 Junior | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/notifications-page) | [🌐 Live](https://itznat-notifications-page.netlify.app) |
+| 07 | product-preview-card-component | HTML, Tailwind CSS | 🟢 Newbie | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/product-preview-card-component) | [🌐 Live](https://itznat-product-preview.netlify.app) |
+| 08 | single-price-grid-component | HTML, CSS | 🟢 Newbie | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/single-price-grid-component) | [🌐 Live](https://itznat-single-price-grid.netlify.app) |
+| 09 | static-job-listings | HTML, Tailwind CSS, JavaScript | 🟠 Intermediate | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/static-job-listings) | [🌐 Live](https://itznat-job-listings.netlify.app) |
+| 10 | time-tracking-dashboard | HTML, Tailwind CSS, JavaScript | 🟡 Junior | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/time-tracking-dashboard) | [🌐 Live](https://itznat-time-tracking.netlify.app) |
 
 ---
 
