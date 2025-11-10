@@ -12,7 +12,7 @@ A collection of my completed challenges from [Frontend Mentor](https://www.front
 ## 📁 Projects List
 
 | #  | Project | Technologies | Difficulty | Links | Live |
-|----|----------|---------------|-------------|--------|
+|----|----------|---------------|-------------|--------|--------|
 | 01 | 3-column-preview-card-component | HTML, Tailwind CSS | 🟢 Newbie | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/3-column-preview-card-component) | [🌐 Live](https://itznat-3-column-preview-card.netlify.app) |
 | 02 | browser-extension-manager-ui | HTML, Tailwind CSS, JavaScript | 🟡 Junior | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/browser-extension-manager-ui) | [🌐 Live](https://itznat-browser-extension-ui.netlify.app) |
 | 03 | mortgage-repayment-calculator | HTML, Tailwind CSS, JavaScript | 🟡 Junior | [💻 Code](https://github.com/itzNat/Frontend-Mentor-/tree/main/mortgage-repayment-calculator) | [🌐 Live](https://itznat-mortgage-calculator.netlify.app) |
